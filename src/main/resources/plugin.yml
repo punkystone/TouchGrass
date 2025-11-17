@@ -1,0 +1,10 @@
+name: TouchGrass
+version: '1.0-SNAPSHOT'
+main: punky.stone.touchgrass.TouchGrass
+api-version: '1.21'
+commands:
+  restart:
+    description: World Reset Restart
+    usage: /restart
+depend:
+  - ChallengePlugin
