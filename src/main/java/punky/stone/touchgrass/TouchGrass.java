@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import punky.stone.challengeplugin.ChallengePluginAPI;
 
 public final class TouchGrass extends JavaPlugin {
+    final static String CHALLENGE_ID = "touchgrass";
     private GrassChecker grassChecker;
 
     @Override
@@ -17,6 +18,7 @@ public final class TouchGrass extends JavaPlugin {
             return;
         }
         ChallengePluginAPI challengePluginAPI = provider.getProvider();
+        if (!challengePluginAPI.isAllowedToStart(CHALLENGE_ID)) return;
         MovementCancel movementCancel = new MovementCancel(this);
         movementCancel.init();
         challengePluginAPI.registerChallengeEvents(movementCancel);

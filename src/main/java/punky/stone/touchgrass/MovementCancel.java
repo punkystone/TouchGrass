@@ -39,4 +39,9 @@ public class MovementCancel implements Listener, ChallengeEvents {
     public void onTimerPaused() {
         movementDisabled = true;
     }
+
+    @Override
+    public void onChallengeRestart() {
+
+    }
 }
