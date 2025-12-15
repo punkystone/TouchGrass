@@ -30,7 +30,8 @@ public final class TouchGrass extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        grassChecker.cancel();
+        if (grassChecker != null) {
+            grassChecker.cancel();
+        }
     }
-
 }
